@@ -5,9 +5,14 @@ import LocalFont from "@next/font/local";
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Zector = LocalFont({
+const font_zector = LocalFont({
 	src: "../../public/fonts/Zector.ttf",
 	variable: "--font-zector",
+});
+
+const font_logotype_bold = LocalFont({
+  src: "../../public/fonts/logotype_3/LOGOTYPE-ExtraBold.otf",
+  variable: "--font-logotype-bold"
 });
 
 export const metadata: Metadata = {
@@ -22,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={[inter.className,  Zector.variable].join(" ")}>{children}</body>
+      <body className={[inter.className,  font_zector.variable, font_logotype_bold.variable].join(" ")}>{children}</body>
     </html>
   )
 }

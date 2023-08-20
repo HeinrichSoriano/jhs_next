@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         zector: ["var(--font-zector)"],
+        logotype_bold: ["var(--font-logotype-bold)"],
       },
     },
   },
