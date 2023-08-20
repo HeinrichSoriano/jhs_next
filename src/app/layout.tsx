@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import LocalFont from "@next/font/local";
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={[inter.className,  font_zector.variable, font_logotype_bold.variable].join(" ")}>{children}</body>
+      <body className={[inter.className,  font_zector.variable, font_logotype_bold.variable].join(" ")}>
+        <NextTopLoader color="#9966ff"/>
+        {children}
+      </body>
     </html>
   )
 }
