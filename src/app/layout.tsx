@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={[inter.className,  font_zector.variable, font_logotype_bold.variable].join(" ")}>
-        <NextTopLoader color="#9966ff"/>
+        <NextTopLoader color="#FFFFFF"/>
         {children}
       </body>
     </html>

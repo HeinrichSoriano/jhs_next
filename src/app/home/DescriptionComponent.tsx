@@ -1,6 +1,6 @@
 `use client`;
 import { useState, useEffect } from "react";
-import styles from './styles.module.css';
+import styles from './DescriptionComponent.module.css';
 
 interface propTypes {
     titles: any;
@@ -16,11 +16,12 @@ const DescriptionCompomnent:React.FC<propTypes> = ({titles}) => {
         return () => {
             clearInterval(TypingInterval);
         };
-    }, []);
+    }, [titles]);
 
     const setTypingTitle = (arr_index = 0) => {
         let value = titles[arr_index];
         let index = 0;
+        if(!value)return;
         TypingInterval = setInterval(() => {
             set_title(value.slice(0, index));
             index++;
@@ -34,6 +35,7 @@ const DescriptionCompomnent:React.FC<propTypes> = ({titles}) => {
     const setUntypeTitle = (arr_index = 0) => 
     {
         let value = titles[arr_index];
+        if(!value)return;
         setTimeout(() => {
             TypingInterval = setInterval(() => {
                 value = value.slice(0, -1);

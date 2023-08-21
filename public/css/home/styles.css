@@ -1,0 +1,58 @@
+#title_container,
+#description_container,
+#link_container
+{
+    opacity: 0;
+}
+
+#title_container.show-up
+{
+    display: block;
+    animation-name: show_up;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+}
+
+#description_container.show
+{
+    display: block;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+}
+
+#link_container.show-up
+{
+    animation-name: show_up;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+}
+
+@keyframes show_up
+{
+    from 
+    {
+        opacity:0;
+        transform: translateY(100%);
+    }
+    to
+    {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes show
+{
+    from 
+    {
+        opacity:0;
+    }
+    to
+    {
+        opacity:1;
+    }
+}

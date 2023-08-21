@@ -1,0 +1,69 @@
+#mountain_gray,
+#mountain_violet,
+#cloud_left,
+#cloud_right
+{
+    position:absolute;
+}
+#mountain_gray
+{
+    bottom: -50%;
+}
+
+#mountain_violet
+{
+    bottom:-50%;
+}
+#cloud_left
+{
+    left: 0px;
+    top:10%;
+    width: 30%;
+}
+
+#cloud_right
+{
+    top:20%;
+    right:0px;
+    width: 30%;
+}
+
+@media only screen and (max-width: 821px) {
+    #cloud_right
+    {
+        top:50%;
+    }
+    #cloud_left
+    {
+        top:40%;
+    }
+    #mountain_violet
+    {
+        bottom:0px;
+    }
+    #mountain_gray
+    {
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 1230) {
+    #cloud_right
+    {
+        top:50%;
+    }
+    #cloud_left
+    {
+        top:20%;
+    }
+    #mountain_violet
+    {
+        bottom:-30%;
+    }
+    #mountain_gray
+    {
+        bottom: -30%;
+    }
+}
+
+
